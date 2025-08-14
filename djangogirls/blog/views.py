@@ -63,7 +63,3 @@ def post_remove(request, pk):
 
 from django.contrib import messages
 
-def post_logout(request):
-    logout(request)
-    messages.success(request, 'You have been logged out successfully.')
-    return redirect('post_list')
