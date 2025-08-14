@@ -60,3 +60,10 @@ def post_remove(request, pk):
     if request.method=='POST' or request.method=='GET':
         post.delete()
     return redirect('post_list')
+
+from django.contrib import messages
+
+def post_logout(request):
+    logout(request)
+    messages.success(request, 'You have been logged out successfully.')
+    return redirect('post_list')
