@@ -57,6 +57,6 @@ def post_publish(request, pk):
 @login_required
 def post_remove(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    if request.method=='POST':
+    if request.method=='POST' or request.method=='GET':
         post.delete()
     return redirect('post_list')
