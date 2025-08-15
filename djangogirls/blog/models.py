@@ -61,4 +61,5 @@ class BlogPage(Page):
         FieldPanel('date'),
         FieldPanel('intro'),
         FieldPanel('text'),
+        FieldPanel('author'),
     ]
